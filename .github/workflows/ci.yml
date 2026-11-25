@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - practice/ci-failure
   pull_request:
     branches:
       - master
@@ -22,5 +23,5 @@ jobs:
           test -f .gitignore
           echo ".gitignore file exists"
 
--name: Simulate CI failure
- run: exit 1
+      - name: Simulate CI failure
+        run: exit 1
