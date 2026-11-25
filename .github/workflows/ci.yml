@@ -21,3 +21,6 @@ jobs:
           echo "GitHub Actions CI started"
           test -f .gitignore
           echo ".gitignore file exists"
+
+-name: Simulate CI failure
+ run: exit 1
