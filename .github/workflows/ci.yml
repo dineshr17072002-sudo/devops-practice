@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - master
+      - practice/ci-failure
+
   pull_request:
     branches:
       - master
@@ -21,3 +23,8 @@ jobs:
           echo "GitHub Actions CI started"
           test -f .gitignore
           echo ".gitignore file exists"
+
+      - name: Fix CI failure
+        run: |
+          echo "CI failure fixed"
+          exit 0
